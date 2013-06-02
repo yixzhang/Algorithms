@@ -1,7 +1,9 @@
 def insertion_sort(array : Array[Int]){
+	//start from the second element of the array
 	for(insert_index <- 1 to array.length - 1){
 		val insert_num = array(insert_index)
 		var i = insert_index - 1
+		//move the element right if it's smaller than the insert element
 		while(i >= 0 && array(i) > insert_num){
 			array(i+1) = array(i)
 			i = i -1
