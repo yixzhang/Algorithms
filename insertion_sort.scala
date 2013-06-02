@@ -14,16 +14,16 @@ def insertion_sort[T <: Int](array : Array[T]){
 	}
 }
 
-def print_sort_result[T <: Int](array: Array[T])(sort: Array[T] => Unit){
+def print_sort[T <: Int](array: Array[T])(sort: Array[T] => Unit){
 	println("Original array is [" + array.mkString(", ") + "]")
 	sort(array)
 	println("Sorted array is [" + array.mkString(", ") + "]")
 }
 
 val normal_case = Array(1, 0, 11, 2, -1, 100, 99, 23, 101, 56, -10, 7)
-print_sort_result(normal_case){ normal_case => insertion_sort(normal_case)}
+print_sort(normal_case){ normal_case => insertion_sort(normal_case)}
 
 val one_element = Array(1)
-print_sort_result(one_element){ one_element => insertion_sort(one_element)}
+print_sort(one_element){ one_element => insertion_sort(one_element)}
 
 
